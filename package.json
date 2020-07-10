@@ -4,7 +4,7 @@
   "description": "CLI tool for FennecJS - The declarative JSX/TSX Nodejs framework built on express ",
   "bin": "bin/index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,36 @@
   },
   "homepage": "https://github.com/Phl3bas/fennec-cli#readme",
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@types/core-js": "^2.5.3",
+    "@types/inquirer": "^6.5.0",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.21",
+    "jest": "^26.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.21.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "ts-jest": "^26.1.1",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "glob": "^7.1.6",
+    "inquirer": "^7.3.0",
+    "ora": "^4.0.4",
+    "yargs": "^15.4.0"
   }
 }
