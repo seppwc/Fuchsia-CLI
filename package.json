@@ -1,0 +1,28 @@
+{
+  "name": "fennec-cli",
+  "version": "0.0.1",
+  "description": "CLI tool for FennecJS - The declarative JSX/TSX Nodejs framework built on express ",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phl3bas/fennec-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "fennec",
+    "typescript",
+    "express",
+    "nodejs",
+    "JSX",
+    "TSX"
+  ],
+  "author": "Sepp Wikramaratna-Clarke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Phl3bas/fennec-cli/issues"
+  },
+  "homepage": "https://github.com/Phl3bas/fennec-cli#readme"
+}
