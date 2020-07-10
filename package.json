@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/Phl3bas/fennec-cli/issues"
   },
-  "homepage": "https://github.com/Phl3bas/fennec-cli#readme"
+  "homepage": "https://github.com/Phl3bas/fennec-cli#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
 }
