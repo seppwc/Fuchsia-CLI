@@ -1,2 +1,2 @@
-# fennec-cli
+# Fennec-CLI
 CLI tool for FennecJS
