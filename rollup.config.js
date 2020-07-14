@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
-import builtins from 'rollup-plugin-node-builtins';
+
 import globals from 'rollup-plugin-node-globals';
 import json from 'rollup-plugin-json';
 
@@ -12,10 +12,20 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 const external = [
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
+  'child_process',
+  'fs',
+  'path',
+  'os',
+  'https',
+  'readline',
+  'zlib',
+  'events',
+  'stream',
+  'util',
+  'buffer',
 ];
 
 const plugins = [
-  builtins(),
   commonjs({ include: 'node_modules/**' }),
   globals(),
   json(),

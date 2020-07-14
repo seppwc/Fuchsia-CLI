@@ -4,7 +4,7 @@
   "description": "CLI tool for FennecJS - The declarative JSX/TSX Nodejs framework built on express ",
   "main": "dist/bin/index.js",
   "bin": {
-    "fnc": "dist/bin/index"
+    "fnc": "dist/bin/index.js"
   },
   "scripts": {
     "build:tsc": "tsc",
