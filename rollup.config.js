@@ -1,10 +1,8 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
-
 import globals from 'rollup-plugin-node-globals';
 import json from 'rollup-plugin-json';
-
 import pkg from './package.json';
 
 const input = 'bin/index.ts';
@@ -26,10 +24,9 @@ const external = [
 ];
 
 const plugins = [
-  commonjs({ include: 'node_modules/**' }),
+  commonjs(),
   globals(),
   json(),
-
   resolve({
     extensions,
   }),
