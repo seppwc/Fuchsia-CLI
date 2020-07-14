@@ -31,6 +31,9 @@
     /* Module Resolution Options */
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["bin/**/*", "commands/**/*", "lib/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

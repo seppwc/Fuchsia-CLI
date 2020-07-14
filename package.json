@@ -2,9 +2,17 @@
   "name": "fennec-cli",
   "version": "0.0.1",
   "description": "CLI tool for FennecJS - The declarative JSX/TSX Nodejs framework built on express ",
-  "bin": "bin/index.js",
+  "main": "dist/bin/index.js",
+  "bin": {
+    "fnc": "dist/bin/index"
+  },
   "scripts": {
-    "test": "jest"
+    "build:tsc": "tsc",
+    "build": "rollup -c",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "start:dev": "node ./dist/bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +52,7 @@
     "jest": "^26.1.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.21.0",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
     "ts-jest": "^26.1.1",
