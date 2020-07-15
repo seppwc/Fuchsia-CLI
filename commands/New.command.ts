@@ -11,14 +11,14 @@ export class NewCommand extends AbstractCommand {
         '--directory [directory]',
         'Specify the destination directory for your project'
       )
-      .action(async (name: string, command: CommanderStatic) => {
+      .action(async (name: string) => {
         const inputs: any[] = []
         inputs.push({ name: 'name', value: name })
 
-        const options: any[] = []
-        options.push({ name: 'directory', value: command.directory })
+        // const options: any[] = []
+        // options.push({ name: 'directory', value: command.directory })
 
-        await this.action.handle(inputs, options)
+        await this.action.handle(inputs)
       })
   }
 }
