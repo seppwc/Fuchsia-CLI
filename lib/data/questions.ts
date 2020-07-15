@@ -9,7 +9,7 @@ export const questions = {
     type: 'list',
     name: 'package',
     message: 'Which Package Manager would you like to use?',
-    choices: ['Npm', 'Yarn'],
+    choices: ['NPM', 'Yarn'],
   },
 }
 

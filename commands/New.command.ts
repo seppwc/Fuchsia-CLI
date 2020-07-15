@@ -2,6 +2,7 @@ import { AbstractCommand } from './Abstract.command'
 import { CommanderStatic } from 'commander'
 import inquirer from 'inquirer'
 import { IUserAnswers, questions } from '../lib'
+import chalk from 'chalk'
 
 export class NewCommand extends AbstractCommand {
   load(program: CommanderStatic): void {
@@ -16,7 +17,9 @@ export class NewCommand extends AbstractCommand {
       .action(async (name: string) => {
         const inputs: any[] = []
         inputs.push({ name: 'name', value: name })
-
+        console.clear()
+        console.log(chalk.cyan('FENNECJS Project Setup'))
+        console.log(chalk.cyan('____________________\n\n'))
         const { language, packageManager } = questions
         const answers: IUserAnswers = await inquirer.prompt([language, packageManager])
 
