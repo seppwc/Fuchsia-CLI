@@ -9,11 +9,10 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./dist/",
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true,
 
     /* Strict Type-Checking Options */
     "strict": true,
@@ -37,6 +36,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["bin/**/*", "commands/**/*", "lib/**/*"],
+  "include": ["bin/**/*", "commands/**/*", "lib/**/*", "actions/**/*"],
   "exclude": ["node_modules", "dist"]
 }

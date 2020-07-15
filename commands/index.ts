@@ -1,1 +1,1 @@
-export * from './Command.loader';
+export * from './Loader.command';
