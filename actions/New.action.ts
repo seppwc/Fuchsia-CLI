@@ -1,20 +1,21 @@
 import { AbstractAction } from './Abstract.action'
-import { GitRunner } from '../lib'
+import { GitRunner, IUserAnswers, Repository } from '../lib'
 import { join } from 'path'
 import { existsSync, mkdirSync } from 'fs'
 import { DEFAULTS } from '../lib'
 import ora from 'ora'
 
 export class NewAction extends AbstractAction {
-  public async handle(inputs: any[]): Promise<void> {
+  public async handle(inputs: any[], options: IUserAnswers): Promise<void> {
     const dir = inputs[0].value
     if (!existsSync(dir)) {
       mkdirSync(join(process.cwd(), dir))
       console.log(`Project directory created at: ${join(process.cwd(), dir)}`)
     }
+    const git = options.language === 'Typescript' ? DEFAULTS.git : Repository.JAVASCRIPT
 
-    await this.cloneGitRepository(DEFAULTS.git, dir)
-    await this.installDependancies()
+    await this.cloneGitRepository(git, dir)
+    // await this.installDependancies()
   }
 
   private async cloneGitRepository(repo: string, dir: string) {
@@ -41,5 +42,5 @@ export class NewAction extends AbstractAction {
     }
   }
 
-  private async installDependancies() {}
+  // private async installDependancies() {}
 }

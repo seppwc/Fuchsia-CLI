@@ -1,5 +1,7 @@
 import { AbstractCommand } from './Abstract.command'
 import { CommanderStatic } from 'commander'
+import inquirer from 'inquirer'
+import { IUserAnswers, questions } from '../lib'
 
 export class NewCommand extends AbstractCommand {
   load(program: CommanderStatic): void {
@@ -15,10 +17,10 @@ export class NewCommand extends AbstractCommand {
         const inputs: any[] = []
         inputs.push({ name: 'name', value: name })
 
-        // const options: any[] = []
-        // options.push({ name: 'directory', value: command.directory })
+        const { language, packageManager } = questions
+        const answers: IUserAnswers = await inquirer.prompt([language, packageManager])
 
-        await this.action.handle(inputs)
+        await this.action.handle(inputs, answers)
       })
   }
 }
