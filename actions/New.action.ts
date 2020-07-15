@@ -1,5 +1,5 @@
 import { AbstractAction } from './Abstract.action'
-import { GitRunner } from '../lib/tools/Git.runner'
+import { GitRunner } from '../lib'
 import { join } from 'path'
 import { existsSync, mkdirSync } from 'fs'
 
@@ -10,7 +10,7 @@ export class NewAction extends AbstractAction {
       mkdirSync(join(process.cwd(), dir))
       console.log(`Project directory created at: ${join(process.cwd(), dir)}`)
     }
-    this.initialiseGitRepository(dir)
+    await this.initialiseGitRepository(dir)
   }
 
   private async initialiseGitRepository(dir: string) {
