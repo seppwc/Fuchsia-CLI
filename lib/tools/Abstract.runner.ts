@@ -3,9 +3,13 @@ import { ChildProcess, spawn } from 'child_process'
 export abstract class AbstractRunner {
   constructor(protected process: string) {}
 
-  public async run(command: string, cwd: string = process.cwd()): Promise<null | string> {
+  public async run(
+    command: string[],
+    cwd: string = process.cwd()
+  ): Promise<null | string> {
+    const args: string[] = command
     return new Promise<null | string>((resolve, reject) => {
-      const child: ChildProcess = spawn(`${this.process}`, [command], {
+      const child: ChildProcess = spawn(`${this.process}`, args, {
         cwd,
         stdio: 'pipe',
         shell: true,
