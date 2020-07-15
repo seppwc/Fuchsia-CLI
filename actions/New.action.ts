@@ -64,11 +64,11 @@ export class NewAction extends AbstractAction {
         )} ${chalk.yellowBright.underline.italic(dir)} \n\nTo start development: \n`
       )
       console.info('\tChange into directory: \n')
-      console.info(chalk.blueBright(`\t\t ${chalk.italic('cd')} ${dir} \n\n`))
+      console.info(chalk.blue(`\t\t ${chalk.italic('cd')} ${dir} \n\n`))
       console.info('\tInstall dependancies: \n')
-      console.info(chalk.blueBright(`\t\t ${chalk.italic('npm install')} \n\n`))
-      console.info('\tStart development server \n')
-      console.info(chalk.blueBright(`\t\t ${chalk.italic('fnc start')} \n\n`))
+      console.info(chalk.blue(`\t\t ${chalk.italic('npm install')} \n\n`))
+      console.info('\tStart development server: \n')
+      console.info(chalk.blue(`\t\t ${chalk.italic('fnc start')} \n\n`))
     } catch {
       spinner.fail()
       console.error('THERE WAS AN ERROR COPYING THE REPO, BAD LUCK')
