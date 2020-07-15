@@ -4,6 +4,7 @@ import { join } from 'path'
 import { existsSync, mkdirSync } from 'fs'
 import { DEFAULTS } from '../lib'
 import ora from 'ora'
+import chalk from 'chalk'
 
 export class NewAction extends AbstractAction {
   /**
@@ -56,10 +57,18 @@ export class NewAction extends AbstractAction {
 
       await runner.run(['clone', repo, '.'], join(process.cwd(), dir))
       spinner.succeed()
-      console.info(`Repository cloned from: ${repo}`)
-      console.log('')
-      console.info(`cd ${dir}`)
-      console.info(`npm install`)
+      console.clear()
+      console.info(
+        `${chalk.yellow(
+          'Congratulations! FennecJS project created in '
+        )} ${chalk.yellowBright.underline.italic(dir)} \n\nTo start development: \n`
+      )
+      console.info('\tChange into directory: \n')
+      console.info(chalk.blueBright(`\t\t ${chalk.italic('cd')} ${dir} \n\n`))
+      console.info('\tInstall dependancies: \n')
+      console.info(chalk.blueBright(`\t\t ${chalk.italic('npm install')} \n\n`))
+      console.info('\tStart development server \n')
+      console.info(chalk.blueBright(`\t\t ${chalk.italic('fnc start')} \n\n`))
     } catch {
       spinner.fail()
       console.error('THERE WAS AN ERROR COPYING THE REPO, BAD LUCK')
