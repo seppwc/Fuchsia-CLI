@@ -64,7 +64,7 @@ export class NewAction extends AbstractAction {
         )} ${chalk.yellowBright.underline.italic(dir)} \n\nTo start development: \n`
       )
       console.info('\tChange into directory: \n')
-      console.info(chalk.blue(`\t\t ${chalk.italic('cd')} ${dir} \n\n`))
+      console.info(chalk.blue(`\t\t ${chalk.italic('cd')} ${chalk.italic(dir)} \n\n`))
       console.info('\tInstall dependancies: \n')
       console.info(chalk.blue(`\t\t ${chalk.italic('npm install')} \n\n`))
       console.info('\tStart development server: \n')
