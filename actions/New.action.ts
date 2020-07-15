@@ -6,7 +6,23 @@ import { DEFAULTS } from '../lib'
 import ora from 'ora'
 
 export class NewAction extends AbstractAction {
+  /**
+   * @class NewAction
+   * @extends AbstractAction
+   * @classdesc handles desired actions for the new command
+   *
+   *
+   */
+
   public async handle(inputs: any[], options: IUserAnswers): Promise<void> {
+    /**
+     * @method handle
+     * @param inputs
+     * @param options
+     * @description entry point for handling the process
+     * takes in inputs and options
+     * checks if dir exisits if not creates it, checks their answers inset up and inits project
+     */
     const dir = inputs[0].value
     if (!existsSync(dir)) {
       mkdirSync(join(process.cwd(), dir))
@@ -19,6 +35,14 @@ export class NewAction extends AbstractAction {
   }
 
   private async cloneGitRepository(repo: string, dir: string) {
+    /**
+     *  @private
+     *  @method cloneGitRepository
+     *  @param repo
+     *  @param dir
+     *
+     */
+
     const spinner = ora({
       spinner: {
         interval: 120,
