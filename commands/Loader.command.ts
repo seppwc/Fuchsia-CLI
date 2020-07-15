@@ -5,9 +5,9 @@ import { NewAction } from '../actions'
 
 export class CommandLoader {
   public static load(program: CommanderStatic): void {
-    // TODO make other command Classes
-    // new
     new NewCommand(new NewAction()).load(program)
+
+    // TODO make other command Classes
     // build
     // start
     // make
