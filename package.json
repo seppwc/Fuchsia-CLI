@@ -6,6 +6,12 @@
   "bin": {
     "fnc": "dist/bin/index.js"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "tsc",
