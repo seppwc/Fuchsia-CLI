@@ -7,9 +7,7 @@
     "fnc": "dist/bin/index.js"
   },
   "files": [
-    "dist/**/*",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "scripts": {
     "type-check": "tsc --noEmit",
