@@ -1,4 +1,4 @@
 export enum Repository {
-  TYPESCRIPT = 'https://github.com/Phl3bas/Fennec-Typescript-Template.git',
-  JAVASCRIPT = 'https://github.com/Phl3bas/Fennec-Javascript-Template.git',
+  TYPESCRIPT = 'https://github.com/Phl3bas/Fuchsia-Typescript-Template.git',
+  JAVASCRIPT = 'https://github.com/Phl3bas/Fuchsia-Javascript-Template.git',
 }

@@ -26,7 +26,7 @@ export class NewCommand extends AbstractCommand {
     program
       .command('new [name]')
       .alias('n')
-      .description('Creates a new FennecJS project')
+      .description('Creates a new FuchsiaJS project')
       .option(
         '--directory [directory]',
         'Specify the destination directory for your project'
@@ -35,7 +35,7 @@ export class NewCommand extends AbstractCommand {
         const inputs: any[] = []
         inputs.push({ name: 'name', value: name })
         console.clear()
-        console.log(chalk.cyan('FENNECJS Project Setup'))
+        console.log(chalk.cyan('FuchsiaJS Project Setup'))
         console.log(chalk.cyan('____________________\n\n'))
 
         // prompt user for inputs

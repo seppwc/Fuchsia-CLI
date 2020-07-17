@@ -1,2 +1,3 @@
-# Fennec-CLI
-CLI tool for FennecJS
+# Fuchsia-CLI
+
+CLI tool for FuchsiaJS

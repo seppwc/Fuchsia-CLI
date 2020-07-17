@@ -1,7 +1,7 @@
 {
-  "name": "fennec-cli",
+  "name": "fuchsia-cli",
   "version": "0.0.1",
-  "description": "CLI tool for FennecJS - The declarative JSX/TSX Nodejs framework built on express ",
+  "description": "CLI tool for FuchsiaJS - The declarative JSX/TSX Nodejs framework built on express ",
   "main": "dist/bin/index.js",
   "bin": {
     "fnc": "dist/bin/index.js"
@@ -24,7 +24,7 @@
   },
   "keywords": [
     "cli",
-    "fennec",
+    "fuchsiajs",
     "typescript",
     "express",
     "nodejs",
