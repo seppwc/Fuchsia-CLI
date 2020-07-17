@@ -56,9 +56,5 @@
     "ora": "^4.0.4",
     "prettier": "^2.0.5",
     "yargs": "^15.4.0"
-  },
-  "directories": {
-    "lib": "lib",
-    "test": "test"
   }
 }
