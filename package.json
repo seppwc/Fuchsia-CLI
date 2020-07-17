@@ -7,7 +7,18 @@
     "fnc": "dist/bin/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/actions/*",
+    "dist/bin/*",
+    "dist/commands/*",
+    "dist/lib/*",
+    "dist/types/actions/*",
+    "dist/types/bin/*",
+    "dist/types/commands/*",
+    "dist/types/lib/*",
+    "LICENSE",
+    "README.md",
+    "package.json"
   ],
   "scripts": {
     "type-check": "tsc --noEmit",
