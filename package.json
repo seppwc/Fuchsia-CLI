@@ -1,5 +1,5 @@
 {
-  "name": "@fuchsia/cli",
+  "name": "@fuchsiajs/cli",
   "version": "0.0.1",
   "description": "CLI tool for FuchsiaJS - The declarative JSX/TSX Nodejs framework built on express ",
   "main": "dist/bin/index.js",
@@ -8,7 +8,6 @@
   },
   "files": [
     "dist",
-    "package.json",
     "README.md",
     "LICENSE"
   ],
