@@ -1,14 +1,16 @@
 #!/usr/bin/env node
-import commander from 'commander'
+import commander, { CommanderStatic } from 'commander'
 import { CommandLoader } from '../commands'
 import { localBinExists, loadLocalBinCommandLoader } from '../lib'
 
-import pkg from '../package.json'
-
 const bootstrap = () => {
-  const program = commander
+  const program: CommanderStatic = commander
   program
-    .version(pkg.version, '-v, --version', 'Output the current version')
+    .version(
+      require('../package.json').version,
+      '-v, --version',
+      'Output the current version'
+    )
     .usage('<command> [options]')
     .helpOption('-h, --help', 'Output useage information')
 
