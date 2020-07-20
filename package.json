@@ -4,7 +4,7 @@
   "description": "CLI tool for FuchsiaJS - The declarative JSX/TSX Nodejs framework built on express ",
   "main": "dist/bin/index.js",
   "bin": {
-    "fnc": "dist/bin/index.js"
+    "fuchsia": "dist/bin/index.js"
   },
   "files": [
     "dist",
@@ -29,8 +29,8 @@
     "coverage": "jest --coverage",
     "clean": "rimraf dist",
     "prebuild": "npm run format && npm run clean",
-    "fnc:dev": "ts-node ./bin/index.ts",
-    "fnc:prod": "node ./dist/bin/index.js"
+    "fuchsia:dev": "ts-node ./bin/index.ts",
+    "fuchsia:prod": "node ./dist/bin/index.js"
   },
   "repository": {
     "type": "git",
